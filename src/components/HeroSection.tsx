@@ -52,7 +52,7 @@ const HeroSection = () => {
           <div className="mb-8">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="block">환자 중심의 진료, 정밀한 진단으로</span>
-              <span className="block mt-[2.5em]">최선을 다하겠습니다.</span>
+              <span className="block mt-4">최선을 다하겠습니다.</span>
             </h1>
             <p className="text-xl text-white/90 mb-8">
               전문성과 따뜻함이 어우러진 진료로<br />
