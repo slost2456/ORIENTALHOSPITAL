@@ -88,35 +88,35 @@ const FacilitiesSection = () => {
         {/* 상담 신청 섹션 */}
         <div className="relative bg-gray-800 rounded-lg overflow-hidden">
           <div className="absolute inset-0 bg-black/60 rounded-lg"></div>
-          <div className="relative z-10 p-8 text-center">
-            <h3 className="text-2xl font-bold text-white mb-3">정확한 진단과 최선의 진료를 약속드립니다.</h3>
-            <p className="text-white/90 text-base mb-6">
+          <div className="relative z-10 p-6 text-center">
+            <h3 className="text-xl font-bold text-white mb-2">정확한 진단과 최선의 진료를 약속드립니다.</h3>
+            <p className="text-white/90 text-sm mb-4">
               검진을 통해 빠르게 회복될 수 있도록 도와드리겠습니다.
             </p>
             
-            <div className="max-w-xl mx-auto">
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="max-w-lg mx-auto">
+              <form className="space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <input
                     type="text"
                     placeholder="이름"
-                    className="px-4 py-3 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
+                    className="px-4 py-2.5 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
                   />
                   <input
                     type="tel"
                     placeholder="연락처"
-                    className="px-4 py-3 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
+                    className="px-4 py-2.5 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
                   />
                 </div>
                 <textarea
                   placeholder="상담내용"
-                  rows={3}
-                  className="w-full px-4 py-3 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
+                  rows={2}
+                  className="w-full px-4 py-2.5 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
                 ></textarea>
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    className="bg-[#8BC34A] hover:bg-[#7CB342] text-white px-8 py-3 rounded-lg font-bold text-base transition-colors"
+                    className="bg-[#8BC34A] hover:bg-[#7CB342] text-white px-6 py-2.5 rounded-lg font-bold text-sm transition-colors"
                   >
                     빠른상담 신청하기
                   </button>
@@ -124,8 +124,8 @@ const FacilitiesSection = () => {
               </form>
             </div>
             
-            <div className="mt-4">
-              <label className="inline-flex items-center text-white/80 text-sm">
+            <div className="mt-3">
+              <label className="inline-flex items-center text-white/80 text-xs">
                 <input type="checkbox" className="mr-2 accent-green-500" />
                 개인정보취급방침 동의
               </label>
