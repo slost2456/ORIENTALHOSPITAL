@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -36,12 +37,15 @@ const HeroSection = () => {
     <section className="relative">
       {/* 메인 히어로 배너 */}
       <div className="relative h-screen bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/chapter 5-1.png')`
-          }}
-        ></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/chapter 5-1.png"
+            alt="한방병원 메인 배경"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50"></div>
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
@@ -78,10 +82,11 @@ const HeroSection = () => {
                 }}
               >
                 <div className="h-64 bg-gray-200 relative">
-                  <img 
-                    src={category.image} 
+                  <Image
+                    src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
