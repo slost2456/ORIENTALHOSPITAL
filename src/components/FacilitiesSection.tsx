@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const FacilitiesSection = () => {
   return (
@@ -23,43 +24,55 @@ const FacilitiesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-          {/* 왼쪽 이미지 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {/* 왼쪽 이미지 - chapter 5-1.png */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-80 bg-gray-200 relative">
-              <img 
-                src="/chapter 5-3.png"
-                alt="의료진 상담"
-                className="w-full h-full object-cover"
+              <Image
+                src="/chapter 5-1.png"
+                alt="한방 약재 조제"
+                fill
+                className="object-cover"
               />
+            </div>
+            <div className="p-4 text-center">
+              <h3 className="font-bold text-gray-900 mb-2">한방 약재 조제</h3>
             </div>
           </div>
 
-          {/* 중앙 메인 이미지 */}
+          {/* 중앙 메인 이미지 - chapter 6-1.png */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-80 bg-gray-200 relative">
-              <img 
+              <Image
                 src="/chapter 6-1.png"
-                alt="의료진 협진"
-                className="w-full h-full object-cover"
+                alt="힐링 아로마 테라피"
+                fill
+                className="object-cover"
               />
+            </div>
+            <div className="p-4 text-center">
+              <h3 className="font-bold text-gray-900 mb-2">힐링 아로마 테라피</h3>
             </div>
           </div>
 
-          {/* 오른쪽 이미지 */}
+          {/* 오른쪽 이미지 - chapter 5-3.png */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-80 bg-gray-200 relative">
-              <img 
-                src="/herbal-medicine.jpg"
-                alt="전문 의료진"
-                className="w-full h-full object-cover"
+              <Image
+                src="/chapter 5-3.png"
+                alt="의료진 상담 진료"
+                fill
+                className="object-cover"
               />
+            </div>
+            <div className="p-4 text-center">
+              <h3 className="font-bold text-gray-900 mb-2">의료진 상담 진료</h3>
             </div>
           </div>
         </div>
 
         {/* 네비게이션 */}
-        <div className="flex justify-center mt-12 space-x-4">
+        <div className="flex justify-center space-x-4 mb-16">
           <button className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition-colors">
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -73,7 +86,7 @@ const FacilitiesSection = () => {
         </div>
 
         {/* 상담 신청 섹션 */}
-        <div className="mt-16 relative">
+        <div className="relative bg-gray-800 rounded-lg overflow-hidden">
           <div className="absolute inset-0 bg-black/60 rounded-lg"></div>
           <div className="relative z-10 p-12 text-center">
             <h3 className="text-3xl font-bold text-white mb-4">정확한 진단과 최선의 진료를 약속드립니다.</h3>
@@ -111,7 +124,7 @@ const FacilitiesSection = () => {
               </form>
             </div>
             
-            <div className="mt-8 text-right">
+            <div className="mt-6">
               <label className="inline-flex items-center text-white/80 text-sm">
                 <input type="checkbox" className="mr-2 accent-green-500" />
                 개인정보취급방침 동의

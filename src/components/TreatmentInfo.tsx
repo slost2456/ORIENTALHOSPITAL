@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const TreatmentInfo = () => {
   return (
@@ -66,10 +67,11 @@ const TreatmentInfo = () => {
             <div className="grid grid-cols-2 gap-4 h-96">
               {/* 진단 상담 (챕터4-1) */}
               <div className="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                <Image
+                  src="/chapter 4-1.png"
                   alt="진단 및 상담"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-end">
                   <div className="p-4 text-white">
@@ -80,10 +82,11 @@ const TreatmentInfo = () => {
 
               {/* 뜸치료 (챕터4-2) */}
               <div className="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                <Image
+                  src="/chapter 4-2.png"
                   alt="뜸 치료"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-end">
                   <div className="p-4 text-white">
@@ -94,10 +97,11 @@ const TreatmentInfo = () => {
 
               {/* 부항치료 (챕터4-3) */}
               <div className="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                <Image
+                  src="/chapter 4-3.png"
                   alt="부항 치료"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-end">
                   <div className="p-4 text-white">
@@ -108,10 +112,11 @@ const TreatmentInfo = () => {
 
               {/* 침치료 (챕터4-4) */}
               <div className="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                <Image
+                  src="/chapter 4-4.png"
                   alt="침 치료"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-end">
                   <div className="p-4 text-white">
