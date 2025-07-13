@@ -11,7 +11,7 @@ const FacilitiesSection = () => {
         <div 
           className="h-1/2 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://cdn.pixabay.com/photo/2020/07/12/13/10/traditional-chinese-medicine-5397193_1280.jpg')`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/chapter 5-2.jpg')`
           }}
         ></div>
       </div>
@@ -28,8 +28,8 @@ const FacilitiesSection = () => {
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-80 bg-gray-200 relative">
               <img 
-                src="/챕터5-1.png"
-                alt="한방 약재 조제"
+                src="/chapter 5-3.png"
+                alt="의료진 상담"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -39,8 +39,8 @@ const FacilitiesSection = () => {
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-80 bg-gray-200 relative">
               <img 
-                src="/챕터5-2.jpg"
-                alt="힐링 아로마 테라피"
+                src="/chapter 6-1.png"
+                alt="의료진 협진"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -50,8 +50,8 @@ const FacilitiesSection = () => {
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-80 bg-gray-200 relative">
               <img 
-                src="/챕터5-3.png"
-                alt="의료진 상담 진료"
+                src="/herbal-medicine.jpg"
+                alt="전문 의료진"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -67,7 +67,7 @@ const TreatmentInfo = () => {
               {/* 진단 상담 (챕터4-1) */}
               <div className="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow relative">
                 <img 
-                  src="/챕터4-1.png"
+                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   alt="진단 및 상담"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -81,7 +81,7 @@ const TreatmentInfo = () => {
               {/* 뜸치료 (챕터4-2) */}
               <div className="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow relative">
                 <img 
-                  src="/챕터4-2.png"
+                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   alt="뜸 치료"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -95,7 +95,7 @@ const TreatmentInfo = () => {
               {/* 부항치료 (챕터4-3) */}
               <div className="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow relative">
                 <img 
-                  src="/챕터4-3.png"
+                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   alt="부항 치료"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -109,7 +109,7 @@ const TreatmentInfo = () => {
               {/* 침치료 (챕터4-4) */}
               <div className="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow relative">
                 <img 
-                  src="/챕터4-4.png"
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   alt="침 치료"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />

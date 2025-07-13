@@ -10,25 +10,25 @@ const HeroSection = () => {
       title: '척추관절 체형교정',
       description: '체형 진단과 대한 진단한 맞춤',
       tags: ['#체형교정', '#척추측만증', '#교정'],
-      image: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/knees-8941890_1280.jpg'
+      image: '/chapter 4-1.png'
     },
     {
       title: '교통사고',
       description: '체형 진단과 대한 진단한 맞춤',
       tags: ['#교통사고', '#외상치료', '#재활'],
-      image: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/herniated-disc-8941861_1280.jpg'
+      image: '/chapter 4-2.png'
     },
     {
       title: '안면마비',
       description: '체형 진단과 대한 진단한 맞춤',
       tags: ['#안면마비', '#침치료', '#재활'],
-      image: 'https://cdn.pixabay.com/photo/2017/07/23/10/44/dentist-2530990_1280.jpg'
+      image: '/chapter 4-3.png'
     },
     {
       title: '재활치료',
       description: '체형 진단과 대한 진단한 맞춤',
       tags: ['#재활치료', '#물리치료', '#회복'],
-      image: 'https://cdn.pixabay.com/photo/2016/03/01/10/08/life-fitness-house-1230004_1280.jpg'
+      image: '/chapter 4-4.png'
     }
   ];
 
@@ -39,7 +39,7 @@ const HeroSection = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://cdn.pixabay.com/photo/2020/05/03/21/13/acupuncture-5126777_1280.jpg')`
+            backgroundImage: `url('/chapter 5-1.png')`
           }}
         ></div>
         <div className="absolute inset-0 bg-black/50"></div>
@@ -47,8 +47,8 @@ const HeroSection = () => {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <div className="mb-8">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              환자 중심의 진료, 정밀한 진단으로<br />
-              최선을 다하겠습니다.
+              <span className="block">환자 중심의 진료, 정밀한 진단으로</span>
+              <span className="block mt-[2.5em]">최선을 다하겠습니다.</span>
             </h1>
             <p className="text-xl text-white/90 mb-8">
               전문성과 따뜻함이 어우러진 진료로<br />
