@@ -11,25 +11,25 @@ const HeroSection = () => {
       title: '척추관절 체형교정',
       description: '체형 진단과 대한 진단한 맞춤',
       tags: ['#체형교정', '#척추측만증', '#교정'],
-      image: '/chapter 4-1.png'
+      image: '/chapter 2-1.jpg'
     },
     {
       title: '교통사고',
       description: '체형 진단과 대한 진단한 맞춤',
       tags: ['#교통사고', '#외상치료', '#재활'],
-      image: '/chapter 4-2.png'
+      image: '/chapter 2-2.jpg'
     },
     {
       title: '안면마비',
       description: '체형 진단과 대한 진단한 맞춤',
       tags: ['#안면마비', '#침치료', '#재활'],
-      image: '/chapter 4-3.png'
+      image: '/chapter 2-3.jpg'
     },
     {
       title: '재활치료',
       description: '체형 진단과 대한 진단한 맞춤',
       tags: ['#재활치료', '#물리치료', '#회복'],
-      image: '/chapter 4-4.png'
+      image: '/chapter 2-4.jpg'
     }
   ];
 
@@ -39,14 +39,14 @@ const HeroSection = () => {
       <div className="relative h-screen bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/chapter 5-1.png"
-            alt="한방병원 메인 배경"
+            src="/mainpage.jpg"
+            alt="환자와 의사의 상담 장면"
             fill
             className="object-cover"
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <div className="mb-8">

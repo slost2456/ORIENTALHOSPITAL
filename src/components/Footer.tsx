@@ -2,8 +2,24 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-green-500 text-white py-8">
+    <footer className="bg-gradient-to-br from-black via-[#1B2D4D] to-[#0A1220] text-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* 지도 섹션 */}
+        <div className="mb-12">
+          <div className="w-full h-[300px] bg-gray-800 rounded-lg overflow-hidden relative">
+            {/* 임시 지도 디자인 */}
+            <div className="absolute inset-0 bg-gray-700/50">
+              <div className="flex items-center justify-center h-full">
+                <div className="text-center">
+                  <p className="text-lg font-semibold mb-2">튼튼한방병원 위치</p>
+                  <p className="text-sm text-gray-300">대전광역시 서구 한밭대로 755 4층</p>
+                  <p className="text-xs text-gray-400 mt-2">(네이버 지도 API 준비중)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* 로고 및 병원명 */}
           <div className="md:col-span-2">
@@ -25,8 +41,8 @@ const Footer = () => {
               <p className="text-2xl font-bold">1544-6082</p>
               <div className="text-sm opacity-80">
                 <p>월~금 오전 09:00 ~ 오후 18:00</p>
+                <p>(화, 목 저녁 19:00)</p>
                 <p>토요일 오전 09:00 ~ 오후 13:00</p>
-                <p>일요일 오전 09:00 ~ 오후 13:00</p>
               </div>
             </div>
           </div>
@@ -44,27 +60,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* 하단 네비게이션 */}
-        <div className="mt-8 pt-8 border-t border-white/20">
-          <div className="flex flex-wrap justify-center space-x-6 text-sm">
-            <a href="#" className="hover:underline">병원소개</a>
-            <a href="#" className="hover:underline">한방치료</a>
-            <a href="#" className="hover:underline">척추관절</a>
-            <a href="#" className="hover:underline">교통사고</a>
-            <a href="#" className="hover:underline">안면마비</a>
-            <a href="#" className="hover:underline">재활치료</a>
-            <a href="#" className="hover:underline">비만치료</a>
-            <a href="#" className="hover:underline">커뮤니티</a>
-          </div>
-        </div>
-
         {/* 회사 정보 */}
         <div className="mt-8 pt-8 border-t border-white/20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm opacity-80">
             <div>
               <p><strong>튼튼한방병원</strong></p>
-              <p>주소: 대전광역시 서구 한밭대로 755 4층 | 사업자등록번호: 123-45-67890</p>
-              <p>대표자명: 홍길동 | 전화번호: 1544-6082</p>
+              <p>주소: 대전광역시 서구 한밭대로 755 4층 | 사업자등록번호: 847-92-01435</p>
+              <p>대표자명: 한기풍 | 전화번호: 1544-6082</p>
             </div>
             <div>
               <p><strong>Company Info.</strong></p>

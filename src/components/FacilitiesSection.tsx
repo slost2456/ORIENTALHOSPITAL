@@ -35,9 +35,6 @@ const FacilitiesSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="p-4 text-center">
-              <h3 className="font-bold text-gray-900 mb-2">한방 약재 조제</h3>
-            </div>
           </div>
 
           {/* 중앙 메인 이미지 - chapter 6-1.png */}
@@ -50,9 +47,6 @@ const FacilitiesSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="p-4 text-center">
-              <h3 className="font-bold text-gray-900 mb-2">힐링 아로마 테라피</h3>
-            </div>
           </div>
 
           {/* 오른쪽 이미지 - chapter 5-3.png */}
@@ -64,9 +58,6 @@ const FacilitiesSection = () => {
                 fill
                 className="object-cover"
               />
-            </div>
-            <div className="p-4 text-center">
-              <h3 className="font-bold text-gray-900 mb-2">의료진 상담 진료</h3>
             </div>
           </div>
         </div>
@@ -86,37 +77,37 @@ const FacilitiesSection = () => {
         </div>
 
         {/* 상담 신청 섹션 */}
-        <div className="relative bg-gray-800 rounded-lg overflow-hidden">
-          <div className="absolute inset-0 bg-black/60 rounded-lg"></div>
-          <div className="relative z-10 p-8 text-center">
+        <div className="relative bg-black rounded-lg overflow-hidden">
+          <div className="absolute inset-0 bg-black/80 rounded-lg"></div>
+          <div className="relative z-10 p-6 text-center">
             <h3 className="text-xl font-bold text-white mb-2">정확한 진단과 최선의 진료를 약속드립니다.</h3>
             <p className="text-white/90 text-sm mb-4">
               검진을 통해 빠르게 회복될 수 있도록 도와드리겠습니다.
             </p>
             
-            <div className="max-w-2xl mx-auto">
-              <form className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="max-w-md mx-auto">
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
                     type="text"
                     placeholder="이름"
-                    className="px-5 py-4 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
+                    className="px-4 py-3 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
                   />
                   <input
                     type="tel"
                     placeholder="연락처"
-                    className="px-5 py-4 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
+                    className="px-4 py-3 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
                   />
                 </div>
                 <textarea
                   placeholder="상담내용"
-                  rows={4}
-                  className="w-full px-5 py-4 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
+                  rows={3}
+                  className="w-full px-4 py-3 rounded-lg border-0 bg-white/95 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder-gray-500"
                 ></textarea>
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    className="bg-[#8BC34A] hover:bg-[#7CB342] text-white px-10 py-4 rounded-lg font-bold text-base transition-colors"
+                    className="bg-[#8BC34A] hover:bg-[#7CB342] text-white px-8 py-3 rounded-lg font-bold text-base transition-colors"
                   >
                     빠른상담 신청하기
                   </button>
@@ -124,7 +115,7 @@ const FacilitiesSection = () => {
               </form>
             </div>
             
-            <div className="mt-5">
+            <div className="mt-4">
               <label className="inline-flex items-center text-white/80 text-sm">
                 <input type="checkbox" className="mr-2 accent-green-500" />
                 개인정보취급방침 동의
