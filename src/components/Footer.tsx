@@ -11,8 +11,13 @@ declare global {
 const Footer = () => {
   useEffect(() => {
     const initMap = () => {
-      if (typeof window.naver !== 'undefined') {
-        const location = new window.naver.maps.LatLng(36.3503849, 127.3778532); // 대전 서구 한밭대로 755 좌표
+      if (typeof window.naver === 'undefined') {
+        console.error('NAVER Maps API not loaded');
+        return;
+      }
+
+      try {
+        const location = new window.naver.maps.LatLng(36.3503849, 127.3778532);
         const mapOptions = {
           center: location,
           zoom: 17,
@@ -21,12 +26,17 @@ const Footer = () => {
             position: window.naver.maps.Position.TOP_RIGHT
           }
         };
+
         const map = new window.naver.maps.Map('map', mapOptions);
-        new window.naver.maps.Marker({
+        const marker = new window.naver.maps.Marker({
           position: location,
           map: map,
           title: '튼튼한방병원'
         });
+
+        console.log('NAVER Maps initialized successfully');
+      } catch (error) {
+        console.error('Error initializing NAVER Maps:', error);
       }
     };
 
@@ -34,10 +44,15 @@ const Footer = () => {
     script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qzks3s69tp`;
     script.async = true;
     script.onload = initMap;
+    script.onerror = () => {
+      console.error('Failed to load NAVER Maps API');
+    };
     document.head.appendChild(script);
 
     return () => {
-      document.head.removeChild(script);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
 
@@ -46,7 +61,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 지도 섹션 */}
         <div className="mb-12">
-          <div id="map" className="w-full h-[300px] rounded-lg overflow-hidden relative" />
+          <div id="map" className="w-full h-[300px] rounded-lg overflow-hidden relative">
+            {/* 지도 로딩 중 표시할 폴백 UI */}
+            <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
+              <p className="text-white">지도를 불러오는 중...</p>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
