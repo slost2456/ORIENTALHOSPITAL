@@ -1,23 +1,50 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+declare global {
+  interface Window {
+    naver: any;
+  }
+}
 
 const Footer = () => {
+  useEffect(() => {
+    const initMap = () => {
+      if (typeof window.naver !== 'undefined') {
+        const location = new window.naver.maps.LatLng(36.3503849, 127.3778532); // 대전 서구 한밭대로 755 좌표
+        const mapOptions = {
+          center: location,
+          zoom: 17,
+          zoomControl: true,
+          zoomControlOptions: {
+            position: window.naver.maps.Position.TOP_RIGHT
+          }
+        };
+        const map = new window.naver.maps.Map('map', mapOptions);
+        new window.naver.maps.Marker({
+          position: location,
+          map: map,
+          title: '튼튼한방병원'
+        });
+      }
+    };
+
+    const script = document.createElement('script');
+    script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qzks3s69tp`;
+    script.async = true;
+    script.onload = initMap;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <footer className="bg-gradient-to-br from-black via-[#1B2D4D] to-[#0A1220] text-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 지도 섹션 */}
         <div className="mb-12">
-          <div className="w-full h-[300px] bg-gray-800 rounded-lg overflow-hidden relative">
-            {/* 임시 지도 디자인 */}
-            <div className="absolute inset-0 bg-gray-700/50">
-              <div className="flex items-center justify-center h-full">
-                <div className="text-center">
-                  <p className="text-lg font-semibold mb-2">튼튼한방병원 위치</p>
-                  <p className="text-sm text-gray-300">대전광역시 서구 한밭대로 755 4층</p>
-                  <p className="text-xs text-gray-400 mt-2">(네이버 지도 API 준비중)</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="map" className="w-full h-[300px] rounded-lg overflow-hidden relative" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
