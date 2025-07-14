@@ -17,9 +17,8 @@ const Footer = () => {
       }
 
       try {
-        const location = new window.naver.maps.LatLng(36.3503849, 127.3778532);
         const mapOptions = {
-          center: location,
+          center: new window.naver.maps.LatLng(36.3503849, 127.3778532),
           zoom: 17,
           zoomControl: true,
           zoomControlOptions: {
@@ -29,9 +28,8 @@ const Footer = () => {
 
         const map = new window.naver.maps.Map('map', mapOptions);
         const marker = new window.naver.maps.Marker({
-          position: location,
-          map: map,
-          title: '튼튼한방병원'
+          position: mapOptions.center,
+          map: map
         });
 
         console.log('NAVER Maps initialized successfully');
@@ -40,10 +38,12 @@ const Footer = () => {
       }
     };
 
+    // 스크립트 로드 전에 callback 함수를 전역 스코프에 추가
+    window.initNaverMap = initMap;
+
     const script = document.createElement('script');
-    script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qzks3s69tp`;
+    script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qzks3s69tp&callback=initNaverMap`;
     script.async = true;
-    script.onload = initMap;
     script.onerror = () => {
       console.error('Failed to load NAVER Maps API');
     };
@@ -53,6 +53,8 @@ const Footer = () => {
       if (document.head.contains(script)) {
         document.head.removeChild(script);
       }
+      // 전역 callback 함수 제거
+      delete window.initNaverMap;
     };
   }, []);
 
@@ -127,5 +129,12 @@ const Footer = () => {
     </footer>
   );
 };
+
+// TypeScript 전역 타입 선언
+declare global {
+  interface Window {
+    initNaverMap: () => void;
+  }
+}
 
 export default Footer; 
