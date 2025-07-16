@@ -50,9 +50,22 @@ const HeroSection = () => {
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <div className="mb-8">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="block">환자 중심의 진료, 정밀한 진단으로</span>
-              <span className="block mt-4">최선을 다하겠습니다.</span>
+            <h1 className="font-bold text-white mb-6">
+              {/* 모바일 버전 */}
+              <div className="block md:hidden">
+                <p className="text-[56px] leading-normal">
+                  <span className="inline-block w-full text-center">환자 중심의 진료,</span>
+                  <span className="inline-block w-full text-center mt-4">정밀한 진단으로</span>
+                  <span className="inline-block w-full text-center mt-4">최선을 다하겠습니다.</span>
+                </p>
+              </div>
+              {/* 데스크톱 버전 */}
+              <div className="hidden md:block text-6xl">
+                <p className="leading-tight">
+                  <span className="inline-block w-full text-center">환자 중심의 진료, 정밀한 진단으로</span>
+                  <span className="inline-block w-full text-center mt-4">최선을 다하겠습니다.</span>
+                </p>
+              </div>
             </h1>
             <p className="text-xl text-white/90 mb-8">
               전문성과 따뜻함이 어우러진 진료로<br />
