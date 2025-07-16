@@ -53,10 +53,10 @@ const HeroSection = () => {
             <h1 className="font-bold text-white mb-6">
               {/* 모바일 버전 */}
               <div className="block md:hidden">
-                <p className="text-[50px] leading-normal">
+                <p className="text-[48px] leading-normal">
                   <span className="inline-block w-full text-center">환자 중심의 진료,</span>
-                  <span className="inline-block w-full text-center mt-4">정밀한 진단으로</span>
-                  <span className="inline-block w-full text-center mt-4">최선을 다하겠습니다.</span>
+                  <span className="inline-block w-full text-center mt-2">정밀한 진단으로</span>
+                  <span className="inline-block w-full text-center mt-2">최선을 다하겠습니다.</span>
                 </p>
               </div>
               {/* 데스크톱 버전 */}
