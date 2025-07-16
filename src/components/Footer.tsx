@@ -2,9 +2,28 @@
 
 import React, { useEffect, useState } from 'react';
 
+interface KakaoMaps {
+  maps: {
+    LatLng: new (lat: number, lng: number) => any;
+    Map: new (container: HTMLElement, options: any) => any;
+    MapTypeControl: new () => any;
+    ZoomControl: new () => any;
+    ControlPosition: {
+      TOPRIGHT: any;
+      RIGHT: any;
+    };
+    Marker: new (options: any) => any;
+    InfoWindow: new (options: any) => any;
+    event: {
+      addListener: (target: any, type: string, handler: () => void) => void;
+    };
+    load: (callback: () => void) => void;
+  };
+}
+
 declare global {
   interface Window {
-    kakao: any;
+    kakao: KakaoMaps;
   }
 }
 
